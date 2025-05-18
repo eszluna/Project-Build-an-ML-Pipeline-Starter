@@ -52,7 +52,7 @@ def go(config: DictConfig):
 
         if "basic_cleaning" in active_steps:
             _ = mlflow.run(
-                os.path.join("src", "basic_cleaning"),
+                "./src/basic_cleaning"
                 "main",
                 env_manager="conda",
                 parameters={
@@ -64,7 +64,6 @@ def go(config: DictConfig):
                     "max_price": config["etl"]["max_price"],
                 },
             )
-
 
         if "data_check" in active_steps:
             ##################
