@@ -54,6 +54,7 @@ def go(config: DictConfig):
             _ = mlflow.run(
                 os.path.join("src", "basic_cleaning"),
                 'main',
+                version='main',
                 env_manager="conda",
                 parameters={
                     "input_artifact": "sample.csv:latest",
