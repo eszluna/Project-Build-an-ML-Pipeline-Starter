@@ -52,7 +52,7 @@ def go(config: DictConfig):
 
         if "basic_cleaning" in active_steps:
             _ = mlflow.run(
-                "./src/basic_cleaning"
+                "./src/basic_cleaning",
                 "main",
                 env_manager="conda",
                 parameters={
