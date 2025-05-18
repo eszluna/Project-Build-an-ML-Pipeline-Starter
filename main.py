@@ -51,10 +51,6 @@ def go(config: DictConfig):
             )
 
         if "basic_cleaning" in active_steps:
-            ##################
-            # Implement here #
-            ##################
-            if "basic_cleaning" in active_steps:
     _ = mlflow.run(
         os.path.join("src", "basic_cleaning"),
         "main",
